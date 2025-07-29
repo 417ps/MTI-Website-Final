@@ -6,6 +6,25 @@
     <title>MTI - Mission Technology Infrastructure</title>
     <!-- Force cache bust: v1.1 -->
     <link rel="stylesheet" href="css/dark-modern-styles.css?v=1.1">
+    <style>
+        /* Immediate navigation override - loaded before any JS */
+        .global-nav,
+        .navbar {
+            background: rgba(10, 10, 10, 0.95) !important;
+            backdrop-filter: blur(20px) !important;
+        }
+        .global-nav *,
+        .navbar * {
+            color: #b8b8b8 !important;
+            background: transparent !important;
+        }
+        .global-nav .nav-link:hover,
+        .global-nav .nav-link.active,
+        .navbar .nav-link:hover,
+        .navbar .nav-link.active {
+            color: #d4af37 !important;
+        }
+    </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
