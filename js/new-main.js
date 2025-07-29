@@ -152,8 +152,32 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize counter animation
     animateCounters();
     
-    // Simple navbar - no fancy scroll effects
-    // Header stays visible and maintains consistent styling
+    // Force navigation to stay dark - override any other scripts
+    const navbar = document.querySelector('.global-nav') || document.querySelector('.navbar');
+    if (navbar) {
+        // Force dark styling
+        const forceDarkNav = () => {
+            navbar.style.setProperty('background', 'rgba(10, 10, 10, 0.95)', 'important');
+            navbar.style.setProperty('backdrop-filter', 'blur(20px)', 'important');
+            navbar.style.setProperty('color', '#b8b8b8', 'important');
+        };
+        
+        // Apply immediately
+        forceDarkNav();
+        
+        // Override any other scripts trying to change it
+        const observer = new MutationObserver(() => {
+            forceDarkNav();
+        });
+        
+        observer.observe(navbar, {
+            attributes: true,
+            attributeFilter: ['style', 'class']
+        });
+        
+        // Also force it on scroll to override any scroll handlers
+        window.addEventListener('scroll', forceDarkNav, { passive: true });
+    }
     
     // Capability Bar Animations
     function animateCapabilityBars() {

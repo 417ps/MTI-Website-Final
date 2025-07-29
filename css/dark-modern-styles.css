@@ -322,10 +322,37 @@ body .hero .hero-content {
     align-items: center !important;
 }
 
-/* Simple navigation - no scroll state changes */
-.global-nav {
+/* Force navigation to stay dark - nuclear option */
+.global-nav,
+.global-nav *,
+.navbar,
+.navbar * {
     background: rgba(10, 10, 10, 0.95) !important;
     backdrop-filter: blur(20px) !important;
+    color: var(--text-secondary) !important;
+}
+
+.global-nav .nav-link,
+.global-nav .nav-link *,
+.navbar .nav-link,
+.navbar .nav-link * {
+    color: var(--text-secondary) !important;
+    background: transparent !important;
+}
+
+.global-nav .nav-link:hover,
+.global-nav .nav-link.active,
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: var(--accent-gold) !important;
+    background: transparent !important;
+}
+
+.global-nav .cta-button,
+.navbar .cta-button {
+    border: 1px solid var(--accent-gold) !important;
+    color: var(--accent-gold) !important;
+    background: transparent !important;
 }
 
 /* About Section */
