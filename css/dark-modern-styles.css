@@ -322,6 +322,27 @@ body .hero .hero-content {
     align-items: center !important;
 }
 
+/* Force navigation to stay dark always */
+.global-nav,
+.global-nav.scrolled {
+    background: rgba(10, 10, 10, 0.95) !important;
+    backdrop-filter: blur(20px) !important;
+}
+
+.global-nav .nav-link,
+.global-nav.scrolled .nav-link,
+.global-nav .cta-button,
+.global-nav.scrolled .cta-button {
+    color: var(--text-secondary) !important;
+}
+
+.global-nav .nav-link:hover,
+.global-nav.scrolled .nav-link:hover,
+.global-nav .nav-link.active,
+.global-nav.scrolled .nav-link.active {
+    color: var(--accent-gold) !important;
+}
+
 /* About Section */
 .about-modern {
     padding: var(--space-6xl) 0;

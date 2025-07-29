@@ -369,9 +369,9 @@ const additionalStyles = `
     }
     
     .global-nav.scrolled {
-        background: rgba(255, 255, 255, 0.98);
+        background: rgba(10, 10, 10, 0.98) !important;
         backdrop-filter: blur(20px);
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     }
     
     .mobile-toggle.active span:nth-child(1) {
@@ -393,8 +393,8 @@ const additionalStyles = `
         top: 100%;
         left: 0;
         right: 0;
-        background: white;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        background: rgba(10, 10, 10, 0.98) !important;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
         padding: var(--space-lg);
         gap: var(--space-lg);
     }
