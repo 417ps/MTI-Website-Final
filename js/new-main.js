@@ -152,30 +152,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize counter animation
     animateCounters();
     
-    // Navbar Scroll Effect
-    const navbar = document.querySelector('.global-nav');
-    let lastScrollY = window.scrollY;
-    
-    function handleNavbarScroll() {
-        const currentScrollY = window.scrollY;
-        
-        if (currentScrollY > 100) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-        
-        // Hide/show navbar on scroll
-        if (currentScrollY > lastScrollY && currentScrollY > 200) {
-            navbar.style.transform = 'translateY(-100%)';
-        } else {
-            navbar.style.transform = 'translateY(0)';
-        }
-        
-        lastScrollY = currentScrollY;
-    }
-    
-    window.addEventListener('scroll', throttle(handleNavbarScroll, 10));
+    // Simple navbar - no fancy scroll effects
+    // Header stays visible and maintains consistent styling
     
     // Capability Bar Animations
     function animateCapabilityBars() {
@@ -365,13 +343,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Additional CSS for enhanced interactions
 const additionalStyles = `
     .global-nav {
-        transition: transform 0.3s ease, background-color 0.3s ease;
-    }
-    
-    .global-nav.scrolled {
-        background: rgba(10, 10, 10, 0.98) !important;
-        backdrop-filter: blur(20px);
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        /* Simple header - no transitions or scroll effects */
     }
     
     .mobile-toggle.active span:nth-child(1) {

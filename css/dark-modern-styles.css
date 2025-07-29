@@ -92,7 +92,7 @@ p {
     backdrop-filter: blur(20px);
     z-index: 1000;
     padding: var(--space-lg) 0;
-    transition: var(--transition-smooth);
+    /* No transitions - simple static header */
 }
 
 .nav-container {
@@ -322,25 +322,10 @@ body .hero .hero-content {
     align-items: center !important;
 }
 
-/* Force navigation to stay dark always */
-.global-nav,
-.global-nav.scrolled {
+/* Simple navigation - no scroll state changes */
+.global-nav {
     background: rgba(10, 10, 10, 0.95) !important;
     backdrop-filter: blur(20px) !important;
-}
-
-.global-nav .nav-link,
-.global-nav.scrolled .nav-link,
-.global-nav .cta-button,
-.global-nav.scrolled .cta-button {
-    color: var(--text-secondary) !important;
-}
-
-.global-nav .nav-link:hover,
-.global-nav.scrolled .nav-link:hover,
-.global-nav .nav-link.active,
-.global-nav.scrolled .nav-link.active {
-    color: var(--accent-gold) !important;
 }
 
 /* About Section */
